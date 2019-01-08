@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{%  block body %}
+    {% for team in teams %}
+            <ul>
+                <li>{{ team.name }}</li>
+                <li>{{ team.year }}</li>
+                <li>{{ team.stadium }}</li>
+                <li>{{ team.points }}</li>
+            </ul>
+
+{% endblock %}

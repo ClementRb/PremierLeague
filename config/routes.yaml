@@ -1,0 +1,7 @@
+index:
+    path: /
+    controller: App\Controller\HomeController::index
+
+getTeams:
+  path: /teams
+  controller: App\Controller\TeamController::getTeams
