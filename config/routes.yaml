@@ -5,3 +5,15 @@ index:
 getTeams:
   path: /teams
   controller: App\Controller\TeamController::getTeams
+
+addTeams:
+  path: /teams/add
+  controller : App\Controller\TeamController::addTeams
+
+getPlayers :
+  path: /players
+  controller : App\Controller\PlayerController::getPlayers
+
+addPlayers :
+  path: /players/add
+  controller : App\Controller\PlayerController::addPlayers

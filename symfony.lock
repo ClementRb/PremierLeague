@@ -239,6 +239,9 @@
     "symfony/security-http": {
         "version": "v4.2.0"
     },
+    "symfony/stopwatch": {
+        "version": "v4.2.2"
+    },
     "symfony/swiftmailer-bundle": {
         "version": "2.5",
         "recipe": {
