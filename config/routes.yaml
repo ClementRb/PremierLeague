@@ -17,3 +17,7 @@ getPlayers :
 addPlayers :
   path: /players/add
   controller : App\Controller\PlayerController::addPlayers
+
+TeamProfile :
+  path: /teams/{id}
+  controller : App\Controller\TeamController::getOneTeam

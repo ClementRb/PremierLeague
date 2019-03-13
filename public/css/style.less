@@ -12,10 +12,17 @@
 @main-color: #FEFEFE;
 @anim-duration: .4s;
 
-.card-columns {
-  column-count: 5;
+@media (min-width: 1200px) {
+  .card-columns {
+  column-count: 4;
+  } }
 
+@media (max-width: 1199.98px) {
+  .card-columns {
+    column-count: 4;
+  }
 }
+
 
 .flex-center {
     display: flex;

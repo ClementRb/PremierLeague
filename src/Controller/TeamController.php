@@ -76,6 +76,17 @@ class TeamController extends AbstractController {
             ));
     }
 
+    public function getOneTeam($id)
+    {
+        $repo = $this->getDoctrine()->getRepository('App:Team');
+        $team = $repo->find($id);
+
+        return $this->render('OneTeam.html.twig',[
+            'team' => $team
+        ]);
+
+    }
+
 
 
 }
