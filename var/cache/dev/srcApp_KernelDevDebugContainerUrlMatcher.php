@@ -41,6 +41,10 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
                     .')'
                     .'|/_error/(\\d+)(?:\\.([^/]++))?(*:101)'
                     .'|/teams/([^/]++)(*:124)'
+                    .'|/players/([^/]++)/(?'
+                        .'|delete(*:159)'
+                        .'|edit(*:171)'
+                    .')'
                 .')/?$}sDu',
         );
         $this->dynamicRoutes = array(
@@ -48,6 +52,8 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             65 => array(array(array('_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'), array('token'), array('GET' => 0, 'POST' => 1), null, false, true, null)),
             101 => array(array(array('_route' => '_twig_error_test', '_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'), array('code', '_format'), null, null, false, true, null)),
             124 => array(array(array('_route' => 'TeamProfile', '_controller' => 'App\\Controller\\TeamController::getOneTeam'), array('id'), null, null, false, true, null)),
+            159 => array(array(array('_route' => 'DeletePlayer', '_controller' => 'App\\Controller\\PlayerController::deletePlayer'), array('id'), null, null, false, false, null)),
+            171 => array(array(array('_route' => 'EditPlayer', '_controller' => 'App\\Controller\\PlayerController::editPlayer'), array('id'), null, null, false, false, null)),
         );
     }
 }

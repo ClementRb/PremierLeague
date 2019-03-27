@@ -21,3 +21,13 @@ addPlayers :
 TeamProfile :
   path: /teams/{id}
   controller : App\Controller\TeamController::getOneTeam
+
+DeletePlayer :
+  path: /players/{id}/delete
+  controller : App\Controller\PlayerController::deletePlayer
+
+EditPlayer :
+  path: /players/{id}/edit
+  controller : App\Controller\PlayerController::editPlayer
+
+

@@ -84,6 +84,8 @@ class __TwigTemplate_cb6f996c798153bd252f3cb450bc5004d60904bde432fed909b58b32050
         echo "        </div>
 
 
+
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -127,6 +129,8 @@ class __TwigTemplate_cb6f996c798153bd252f3cb450bc5004d60904bde432fed909b58b32050
             </div>
            {% endfor %}
         </div>
+
+
 
 
 {% endblock %}", "team.html.twig", "C:\\wamp64\\www\\PremierLeague\\templates\\team.html.twig");

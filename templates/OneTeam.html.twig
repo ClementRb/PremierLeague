@@ -2,6 +2,30 @@
 
 {% block body %}
 
+    <div style="margin-top: 100px">
+        <h2 class="display-4" >{{ team.name }}</h2>
+        <p >{{ team.year }}</p>
+        <p >{{ team.stadium }}</p>
+        <p >{{ team.numberOfTitles }}</p>
+    </div>
+    <table class="table table-hover" id="example" style="margin-top: 100px;" >
+        <thead>
+        <tr>
+            <th >Player</th>
+            <th >Position</th>
+            <th >Nationality</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for player in team.players %}
+            <tr>
+                <td>{{ player.name }}</td>
+                <td>{{ player.role }}</td>
+                <td>{{ player.nationality }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
 
 {% block fos_user_content %}

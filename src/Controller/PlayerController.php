@@ -95,6 +95,70 @@ class PlayerController extends AbstractController{
 
     }
 
+    public function deletePlayer($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository('App:Player');
+
+        $playerToDelete = $repo->find($id);
+        $em->remove($playerToDelete);
+        $em->flush();
+
+        return $this->redirectToRoute('getPlayers');
+
+    }
+
+    public function editPlayer($id, Request $request)
+    {
+        $form = $this->createFormBuilder($id)
+            ->add('team', EntityType::class,[
+                'class' => Team::class,
+                'choice_label' => 'name',
+                'placeholder' => 'Choose a team'
+            ])
+            ->add('name', TextType::class)
+            ->add('year', IntegerType::class)
+            ->add('nationality', TextType::class)
+            ->add('role', ChoiceType::class,[
+                'choices' => [
+                    'GK' => 'GK',
+                    'CB' => 'CB',
+                    'LB' => 'LB',
+                    'RB' => 'RB',
+                    'CM' => 'CM',
+                    'LM' => 'LM',
+                    'RM' => 'RM',
+                    'CF' => 'CF',
+                    'LW' => 'LW',
+                    'RW' => 'RW'
+                ],
+            ])
+            ->add('save', SubmitType::class, [
+                'label' => 'Add Player'
+            ])
+
+            ->getForm();
+
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+            $em = $this->getDoctrine()->getManager();
+
+            $formData = $form -> getData();
+
+            $id->setTeam($formData->getTeam());
+            $id->setName($formData->getName());
+            $id->setYear($formData->getYear());
+            $id->setNationality($formData->getNationality());
+            $id->setRole($formData->getRole());
+
+            $em ->flush();
+
+            return $this->redirectToRoute('EditPlayer');
+        }
+        return $this->render('editPlayer.html.twig', array('form' => $form->createView(),
+        ));
+    }
+
 
 
 

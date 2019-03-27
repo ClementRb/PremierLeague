@@ -52,43 +52,64 @@ class __TwigTemplate_7d80ce31c23b5ccb86b171ca1e99c0befb2bb5c5eca3ab21f33d0d790e3
         }
         // line 8
         echo "
-    <table class=\"table table-hover\" id=\"example\" >
+    <table class=\"table table-hover\" id=\"example\" style=\"margin-top: 100px;\" >
         <thead>
         <tr>
             <th >Player</th>
             <th >Position</th>
             <th >Nationality</th>
-        </tr>
+            ";
+        // line 15
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+            // line 16
+            echo "            <th>  </th>
+            ";
+        }
+        // line 18
+        echo "        </tr>
         </thead>
         <tbody>
         ";
-        // line 18
+        // line 21
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["players"]) || array_key_exists("players", $context) ? $context["players"] : (function () { throw new Twig_Error_Runtime('Variable "players" does not exist.', 18, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["players"]) || array_key_exists("players", $context) ? $context["players"] : (function () { throw new Twig_Error_Runtime('Variable "players" does not exist.', 21, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["player"]) {
-            // line 19
+            // line 22
             echo "        <tr>
             <td>";
-            // line 20
+            // line 23
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["player"], "name", []), "html", null, true);
             echo "</td>
             <td>";
-            // line 21
+            // line 24
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["player"], "role", []), "html", null, true);
             echo "</td>
             <td>";
-            // line 22
+            // line 25
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["player"], "nationality", []), "html", null, true);
             echo "</td>
-        </tr>
+            ";
+            // line 26
+            if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+                // line 27
+                echo "                <td> <a class=\"btn btn-danger\" href=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("DeletePlayer", ["id" => twig_get_attribute($this->env, $this->source, $context["player"], "id", [])]), "html", null, true);
+                echo "\">Delete</a> <a class=\"btn btn-primary\" href=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("EditPlayer", ["id" => twig_get_attribute($this->env, $this->source, $context["player"], "id", [])]), "html", null, true);
+                echo "\">Edit</a></td>
+            ";
+            }
+            // line 29
+            echo "        </tr>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['player'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 25
+        // line 31
         echo "        </tbody>
     </table>
+
 
 
 ";
@@ -97,13 +118,13 @@ class __TwigTemplate_7d80ce31c23b5ccb86b171ca1e99c0befb2bb5c5eca3ab21f33d0d790e3
 
     }
 
-    // line 32
+    // line 39
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 33
+        // line 40
         echo "    <script src=\"https://code.jquery.com/jquery-3.3.1.js\"></script>
     <script src=\"https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js\"></script>
     <script src=\"https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js\"></script>
@@ -136,7 +157,7 @@ class __TwigTemplate_7d80ce31c23b5ccb86b171ca1e99c0befb2bb5c5eca3ab21f33d0d790e3
 
     public function getDebugInfo()
     {
-        return array (  107 => 33,  101 => 32,  90 => 25,  81 => 22,  77 => 21,  73 => 20,  70 => 19,  66 => 18,  54 => 8,  48 => 6,  45 => 5,  39 => 4,  15 => 1,);
+        return array (  128 => 40,  122 => 39,  110 => 31,  103 => 29,  95 => 27,  93 => 26,  89 => 25,  85 => 24,  81 => 23,  78 => 22,  74 => 21,  69 => 18,  65 => 16,  63 => 15,  54 => 8,  48 => 6,  45 => 5,  39 => 4,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -149,12 +170,15 @@ class __TwigTemplate_7d80ce31c23b5ccb86b171ca1e99c0befb2bb5c5eca3ab21f33d0d790e3
     <a class=\"btn btn-outline-primary\" href=\"{{ path('addPlayers') }}\" role=\"button\" style=\"margin-top: 50px\" >Add a Player </a>
     {% endif %}
 
-    <table class=\"table table-hover\" id=\"example\" >
+    <table class=\"table table-hover\" id=\"example\" style=\"margin-top: 100px;\" >
         <thead>
         <tr>
             <th >Player</th>
             <th >Position</th>
             <th >Nationality</th>
+            {% if is_granted(\"IS_AUTHENTICATED_REMEMBERED\") %}
+            <th>  </th>
+            {% endif %}
         </tr>
         </thead>
         <tbody>
@@ -163,10 +187,14 @@ class __TwigTemplate_7d80ce31c23b5ccb86b171ca1e99c0befb2bb5c5eca3ab21f33d0d790e3
             <td>{{ player.name }}</td>
             <td>{{ player.role }}</td>
             <td>{{ player.nationality }}</td>
+            {% if is_granted(\"IS_AUTHENTICATED_REMEMBERED\") %}
+                <td> <a class=\"btn btn-danger\" href=\"{{ path('DeletePlayer',{'id':player.id} ) }}\">Delete</a> <a class=\"btn btn-primary\" href=\"{{ path('EditPlayer',{'id':player.id} ) }}\">Edit</a></td>
+            {% endif %}
         </tr>
         {% endfor %}
         </tbody>
     </table>
+
 
 
 {% endblock %}

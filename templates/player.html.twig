@@ -6,12 +6,15 @@
     <a class="btn btn-outline-primary" href="{{ path('addPlayers') }}" role="button" style="margin-top: 50px" >Add a Player </a>
     {% endif %}
 
-    <table class="table table-hover" id="example" >
+    <table class="table table-hover" id="example" style="margin-top: 100px;" >
         <thead>
         <tr>
             <th >Player</th>
             <th >Position</th>
             <th >Nationality</th>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            <th>  </th>
+            {% endif %}
         </tr>
         </thead>
         <tbody>
@@ -20,10 +23,14 @@
             <td>{{ player.name }}</td>
             <td>{{ player.role }}</td>
             <td>{{ player.nationality }}</td>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <td> <a class="btn btn-danger" href="{{ path('DeletePlayer',{'id':player.id} ) }}">Delete</a> <a class="btn btn-primary" href="{{ path('EditPlayer',{'id':player.id} ) }}">Edit</a></td>
+            {% endif %}
         </tr>
         {% endfor %}
         </tbody>
     </table>
+
 
 
 {% endblock %}

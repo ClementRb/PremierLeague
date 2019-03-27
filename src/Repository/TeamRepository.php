@@ -18,7 +18,14 @@ class TeamRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Team::class);
     }
-
+    public function getTeamsASC()
+    {
+        return $this->createQueryBuilder('t')
+            ->orderBy('t.Name', 'ASC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
     // /**
     //  * @return Team[] Returns an array of Team objects
     //  */

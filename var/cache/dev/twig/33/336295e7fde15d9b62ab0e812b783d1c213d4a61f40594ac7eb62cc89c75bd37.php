@@ -49,6 +49,8 @@ class __TwigTemplate_a80e915e39499466de5edd091174b9d5a282f997de9b860e10edabf52cb
     <body>
 
 
+
+
     <div class=\"container-fluid\">
         <div class=\"row\">
             <div class=\"col-2\">
@@ -62,37 +64,37 @@ class __TwigTemplate_a80e915e39499466de5edd091174b9d5a282f997de9b860e10edabf52cb
                             <div>
                                 <ul>
                                     <li><a href=\"";
-        // line 31
+        // line 33
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\">Home</a></li>
                                     <li><a href=\"";
-        // line 32
+        // line 34
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("getTeams");
         echo "\">Teams</a></li>
                                     <li><a href=\"";
-        // line 33
+        // line 35
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("getPlayers");
         echo "\">Players</a></li>
                                     ";
-        // line 34
+        // line 36
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 35
+            // line 37
             echo "                                        <li><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_logout");
             echo "\">Logout</a> </li>
                                     ";
         } else {
-            // line 37
+            // line 39
             echo "                                        <li><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_login");
             echo "\">Login</a></li>
                                         <li><a href=\"";
-            // line 38
+            // line 40
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_registration_register");
             echo "\">Register</a></li>
                                     ";
         }
-        // line 40
+        // line 42
         echo "                                </ul>
                             </div>
                         </div>
@@ -102,9 +104,9 @@ class __TwigTemplate_a80e915e39499466de5edd091174b9d5a282f997de9b860e10edabf52cb
             </div>
             <div class=\"col-8\">
                 ";
-        // line 48
+        // line 50
         $this->displayBlock('body', $context, $blocks);
-        // line 51
+        // line 53
         echo "            </div>
             <div class=\"col-2\">
 
@@ -119,11 +121,11 @@ class __TwigTemplate_a80e915e39499466de5edd091174b9d5a282f997de9b860e10edabf52cb
 
 
         ";
-        // line 64
+        // line 66
         $this->displayBlock('javascripts', $context, $blocks);
         // line 71
         echo "    </body>
-    <script src=\"//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js\" ></script>
+    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js\" ></script>
 </html>
 ";
         
@@ -158,13 +160,13 @@ class __TwigTemplate_a80e915e39499466de5edd091174b9d5a282f997de9b860e10edabf52cb
 
     }
 
-    // line 48
+    // line 50
     public function block_body($context, array $blocks = [])
     {
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 49
+        // line 51
         echo "
                 ";
         
@@ -172,18 +174,16 @@ class __TwigTemplate_a80e915e39499466de5edd091174b9d5a282f997de9b860e10edabf52cb
 
     }
 
-    // line 64
+    // line 66
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 65
+        // line 67
         echo "            <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\" integrity=\"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49\" crossorigin=\"anonymous\"></script>
             <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>
-
-
         ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -202,7 +202,7 @@ class __TwigTemplate_a80e915e39499466de5edd091174b9d5a282f997de9b860e10edabf52cb
 
     public function getDebugInfo()
     {
-        return array (  182 => 65,  176 => 64,  168 => 49,  162 => 48,  152 => 7,  146 => 6,  135 => 5,  125 => 71,  123 => 64,  108 => 51,  106 => 48,  96 => 40,  91 => 38,  86 => 37,  80 => 35,  78 => 34,  74 => 33,  70 => 32,  66 => 31,  42 => 11,  40 => 6,  36 => 5,  30 => 1,);
+        return array (  184 => 67,  178 => 66,  170 => 51,  164 => 50,  154 => 7,  148 => 6,  137 => 5,  127 => 71,  125 => 66,  110 => 53,  108 => 50,  98 => 42,  93 => 40,  88 => 39,  82 => 37,  80 => 36,  76 => 35,  72 => 34,  68 => 33,  42 => 11,  40 => 6,  36 => 5,  30 => 1,);
     }
 
     public function getSourceContext()
@@ -223,6 +223,8 @@ class __TwigTemplate_a80e915e39499466de5edd091174b9d5a282f997de9b860e10edabf52cb
 
     </head>
     <body>
+
+
 
 
     <div class=\"container-fluid\">
@@ -274,11 +276,9 @@ class __TwigTemplate_a80e915e39499466de5edd091174b9d5a282f997de9b860e10edabf52cb
             <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\" integrity=\"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49\" crossorigin=\"anonymous\"></script>
             <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>
-
-
         {% endblock %}
     </body>
-    <script src=\"//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js\" ></script>
+    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js\" ></script>
 </html>
 ", "base.html.twig", "C:\\wamp64\\www\\PremierLeague\\templates\\base.html.twig");
     }

@@ -41,6 +41,8 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
         'getPlayers' => array(array(), array('_controller' => 'App\\Controller\\PlayerController::getPlayers'), array(), array(array('text', '/players')), array(), array()),
         'addPlayers' => array(array(), array('_controller' => 'App\\Controller\\PlayerController::addPlayers'), array(), array(array('text', '/players/add')), array(), array()),
         'TeamProfile' => array(array('id'), array('_controller' => 'App\\Controller\\TeamController::getOneTeam'), array(), array(array('variable', '/', '[^/]++', 'id', true), array('text', '/teams')), array(), array()),
+        'DeletePlayer' => array(array('id'), array('_controller' => 'App\\Controller\\PlayerController::deletePlayer'), array(), array(array('text', '/delete'), array('variable', '/', '[^/]++', 'id', true), array('text', '/players')), array(), array()),
+        'EditPlayer' => array(array('id'), array('_controller' => 'App\\Controller\\PlayerController::editPlayer'), array(), array(array('text', '/edit'), array('variable', '/', '[^/]++', 'id', true), array('text', '/players')), array(), array()),
     );
         }
     }

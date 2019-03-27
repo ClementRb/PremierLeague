@@ -41,9 +41,11 @@ class __TwigTemplate_8e2c7ec260edb275cc32e78d0babbcc50f314faf32af26f89ac30493dad
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "   <h1>Premier League Fixtures</h1>
+        echo "   <h1 style=\"margin-top: 100px\">Premier League </h1>
 
-    <p>Today's games</p>
+    <p style=\"margin-top: 100px; text-align: center;\">Retrouvez l'univers de la Barclays Premier League avec tous les joueurs de la ligue ainsi que toutes les equipes.</p>
+    <p style=\"text-align: center;\">Naviguez à travers le menu pour voir vos equipes favorites.</p>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -70,9 +72,11 @@ class __TwigTemplate_8e2c7ec260edb275cc32e78d0babbcc50f314faf32af26f89ac30493dad
         return new Twig_Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-   <h1>Premier League Fixtures</h1>
+   <h1 style=\"margin-top: 100px\">Premier League </h1>
 
-    <p>Today's games</p>
+    <p style=\"margin-top: 100px; text-align: center;\">Retrouvez l'univers de la Barclays Premier League avec tous les joueurs de la ligue ainsi que toutes les equipes.</p>
+    <p style=\"text-align: center;\">Naviguez à travers le menu pour voir vos equipes favorites.</p>
+
 {% endblock %}", "index.html.twig", "C:\\wamp64\\www\\PremierLeague\\templates\\index.html.twig");
     }
 }

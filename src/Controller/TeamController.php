@@ -4,6 +4,7 @@
 namespace App\Controller;
 
 use App\Entity\Team;
+use App\Repository\TeamRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -14,16 +15,12 @@ use Symfony\Component\HttpFoundation\Request;
 
 class TeamController extends AbstractController {
 
-    /**
-     * @return |Symfony|Component|HttpFoundation|Response
-     */
 
 
-    public function getTeams()
+    public function getTeams(TeamRepository $teamRepo)
     {
-    $repo = $this->getDoctrine()->getRepository('App:Team');
 
-        $teams = $repo->findAll();
+        $teams = $teamRepo->getTeamsASC();
 
         return $this->render('team.html.twig',[
             'teams' => $teams
@@ -76,10 +73,12 @@ class TeamController extends AbstractController {
             ));
     }
 
+
     public function getOneTeam($id)
     {
         $repo = $this->getDoctrine()->getRepository('App:Team');
         $team = $repo->find($id);
+        $players = $team->getPlayers();
 
         return $this->render('OneTeam.html.twig',[
             'team' => $team
