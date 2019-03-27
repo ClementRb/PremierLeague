@@ -87,12 +87,6 @@ class PlayerController extends AbstractController{
         }
         return $this->render('addPlayer.html.twig', array('form' => $form->createView(),
             ));
-
-
-
-
-
-
     }
 
     public function deletePlayer($id)
@@ -110,7 +104,9 @@ class PlayerController extends AbstractController{
 
     public function editPlayer($id, Request $request)
     {
-        $form = $this->createFormBuilder($id)
+        $em = $this->getDoctrine()->getManager();
+        $player = $em-> getRepository(Player::class)->find($id);
+        $form = $this->createFormBuilder($player)
             ->add('team', EntityType::class,[
                 'class' => Team::class,
                 'choice_label' => 'name',
@@ -134,26 +130,15 @@ class PlayerController extends AbstractController{
                 ],
             ])
             ->add('save', SubmitType::class, [
-                'label' => 'Add Player'
+                'label' => 'Update'
             ])
-
             ->getForm();
 
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
-            $em = $this->getDoctrine()->getManager();
-
-            $formData = $form -> getData();
-
-            $id->setTeam($formData->getTeam());
-            $id->setName($formData->getName());
-            $id->setYear($formData->getYear());
-            $id->setNationality($formData->getNationality());
-            $id->setRole($formData->getRole());
-
-            $em ->flush();
-
-            return $this->redirectToRoute('EditPlayer');
+            $player = $form -> getData();
+            $em -> flush();
+            return $this->redirectToRoute('getPlayers');
         }
         return $this->render('editPlayer.html.twig', array('form' => $form->createView(),
         ));
