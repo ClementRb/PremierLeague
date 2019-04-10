@@ -136,56 +136,55 @@ class __TwigTemplate_a80e915e39499466de5edd091174b9d5a282f997de9b860e10edabf52cb
         $this->displayBlock('javascripts', $context, $blocks);
         // line 82
         echo "    </body>
+        <script src=\"https://code.jquery.com/jquery-3.3.1.js\"></script>
+        <script src=\"https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js\"></script>
+        <script src=\"https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js\"></script>
         <script src=\"";
-        // line 83
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-3.2.1.min.js"), "html", null, true);
-        echo "\"></script>
-        <script src=\"";
-        // line 84
+        // line 86
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/bootstrap4/popper.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 85
+        // line 87
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/bootstrap4/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 86
+        // line 88
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/greensock/TweenMax.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 87
+        // line 89
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/greensock/TimelineMax.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 88
+        // line 90
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/scrollmagic/ScrollMagic.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 89
+        // line 91
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/greensock/animation.gsap.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 90
+        // line 92
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/greensock/ScrollToPlugin.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 91
+        // line 93
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/OwlCarousel2-2.2.1/owl.carousel.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 92
+        // line 94
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/Isotope/isotope.pkgd.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 93
+        // line 95
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/easing/easing.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 94
+        // line 96
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/parallax-js-master/parallax.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 95
+        // line 97
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/custom.js"), "html", null, true);
         echo "\"></script>
 </html>
@@ -276,7 +275,7 @@ class __TwigTemplate_a80e915e39499466de5edd091174b9d5a282f997de9b860e10edabf52cb
 
     public function getDebugInfo()
     {
-        return array (  260 => 80,  254 => 79,  246 => 58,  240 => 57,  230 => 16,  226 => 15,  222 => 14,  218 => 13,  214 => 12,  210 => 11,  205 => 10,  199 => 9,  189 => 95,  185 => 94,  181 => 93,  177 => 92,  173 => 91,  169 => 90,  165 => 89,  161 => 88,  157 => 87,  153 => 86,  149 => 85,  145 => 84,  141 => 83,  138 => 82,  136 => 79,  123 => 69,  114 => 63,  109 => 60,  107 => 57,  97 => 49,  92 => 47,  87 => 46,  81 => 44,  79 => 43,  75 => 42,  70 => 40,  64 => 37,  57 => 33,  41 => 19,  39 => 9,  29 => 1,);
+        return array (  259 => 80,  253 => 79,  245 => 58,  239 => 57,  229 => 16,  225 => 15,  221 => 14,  217 => 13,  213 => 12,  209 => 11,  204 => 10,  198 => 9,  188 => 97,  184 => 96,  180 => 95,  176 => 94,  172 => 93,  168 => 92,  164 => 91,  160 => 90,  156 => 89,  152 => 88,  148 => 87,  144 => 86,  138 => 82,  136 => 79,  123 => 69,  114 => 63,  109 => 60,  107 => 57,  97 => 49,  92 => 47,  87 => 46,  81 => 44,  79 => 43,  75 => 42,  70 => 40,  64 => 37,  57 => 33,  41 => 19,  39 => 9,  29 => 1,);
     }
 
     public function getSourceContext()
@@ -363,7 +362,9 @@ class __TwigTemplate_a80e915e39499466de5edd091174b9d5a282f997de9b860e10edabf52cb
 
         {% endblock %}
     </body>
-        <script src=\"{{ asset('js/jquery-3.2.1.min.js') }}\"></script>
+        <script src=\"https://code.jquery.com/jquery-3.3.1.js\"></script>
+        <script src=\"https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js\"></script>
+        <script src=\"https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js\"></script>
         <script src=\"{{ asset('styles/bootstrap4/popper.js') }}\"></script>
         <script src=\"{{ asset('styles/bootstrap4/bootstrap.min.js') }}\"></script>
         <script src=\"{{ asset('plugins/greensock/TweenMax.min.js') }}\"></script>
