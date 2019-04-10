@@ -2,22 +2,33 @@
 
 
 {%  block body %}
-    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-    <a class="btn btn-outline-primary" href="{{ path('addTeams') }}" role="button" style="margin-top: 50px">Add a Team </a>
-    {% endif %}
+    <div class="row">
+    <div class="col">
 
-        <div class="card-columns" style="margin-top: 100px">
+    </div>
+    <div class="col-6" style="margin-top: 150px">
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            <a class="btn btn-outline-primary" href="{{ path('addTeams') }}" role="button" >Add a Team </a>
+        {% endif %}
+
+        <div class="card-columns" >
             {% for team in teams %}
-            <div class="card text-center" style="height: 220px">
-                <img src="" class="card-img-top" alt="">
-                <div class="card-body" >
-                    <h5 class="card-title" >{{ team.name }}</h5>
-                    <p class="card-text">{{ team.stadium }}</p>
-                    <a class="btn btn-primary" href="{{ path('TeamProfile',{'id':team.id} ) }}"> Club Profile</a>
+                <div class="card text-center" >
+                    <img src="" class="card-img-top" alt="">
+                    <div class="card-body" >
+                        <h5 class="card-title" >{{ team.name }}</h5>
+                        <p class="card-text">{{ team.stadium }}</p>
+                        <a class="btn btn-primary" href="{{ path('TeamProfile',{'id':team.id} ) }}"> Club Profile</a>
+                    </div>
                 </div>
-            </div>
-           {% endfor %}
+            {% endfor %}
         </div>
+
+    </div>
+    <div class="col">
+
+    </div>
+</div>
 
 
 

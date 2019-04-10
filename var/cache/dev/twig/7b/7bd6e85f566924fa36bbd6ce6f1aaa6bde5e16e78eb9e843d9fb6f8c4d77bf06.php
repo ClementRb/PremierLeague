@@ -35,64 +35,76 @@ class __TwigTemplate_501c1a02caa83d7f0900219ad574629f2a99bdc9e98ea5bdee315077aaf
         }
         // line 6
         echo "
-<h2 class=\"text-center mt-5\">Login</h2>
+<div class=\"row\">
+    <div class=\"col\">
 
-<form action=\"";
-        // line 9
+    </div>
+    <div class=\"col-6\"
+    style=\"margin-top: 150px;\">
+        <h2 class=\"text-center mt-5\">Login</h2>
+
+        <form action=\"";
+        // line 15
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_check");
         echo "\" method=\"post\">
-    ";
-        // line 10
-        if ((isset($context["csrf_token"]) || array_key_exists("csrf_token", $context) ? $context["csrf_token"] : (function () { throw new Twig_Error_Runtime('Variable "csrf_token" does not exist.', 10, $this->source); })())) {
-            // line 11
-            echo "        <input type=\"hidden\" name=\"_csrf_token\" value=\"";
-            echo twig_escape_filter($this->env, (isset($context["csrf_token"]) || array_key_exists("csrf_token", $context) ? $context["csrf_token"] : (function () { throw new Twig_Error_Runtime('Variable "csrf_token" does not exist.', 11, $this->source); })()), "html", null, true);
+            ";
+        // line 16
+        if ((isset($context["csrf_token"]) || array_key_exists("csrf_token", $context) ? $context["csrf_token"] : (function () { throw new Twig_Error_Runtime('Variable "csrf_token" does not exist.', 16, $this->source); })())) {
+            // line 17
+            echo "                <input type=\"hidden\" name=\"_csrf_token\" value=\"";
+            echo twig_escape_filter($this->env, (isset($context["csrf_token"]) || array_key_exists("csrf_token", $context) ? $context["csrf_token"] : (function () { throw new Twig_Error_Runtime('Variable "csrf_token" does not exist.', 17, $this->source); })()), "html", null, true);
             echo "\" />
-    ";
+            ";
         }
-        // line 13
+        // line 19
         echo "
-    <div class=\"form-group\">
-        <div class=\"row mb-4\">
-            <div class=\"col-md-12 col-sm-12\">
-                <label for=\"username\">";
-        // line 17
+            <div class=\"form-group\">
+                <div class=\"row mb-4\">
+                    <div class=\"col-md-12 col-sm-12\">
+                        <label for=\"username\">";
+        // line 23
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("security.login.username", [], "FOSUserBundle"), "html", null, true);
         echo "</label>
-                <input type=\"text\" class=\"form-control\" id=\"username\" name=\"_username\" value=\"";
-        // line 18
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new Twig_Error_Runtime('Variable "last_username" does not exist.', 18, $this->source); })()), "html", null, true);
+                        <input type=\"text\" class=\"form-control\" id=\"username\" name=\"_username\" value=\"";
+        // line 24
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new Twig_Error_Runtime('Variable "last_username" does not exist.', 24, $this->source); })()), "html", null, true);
         echo "\" required=\"required\" autocomplete=\"username\" />
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class=\"form-group\">
-        <div class=\"row mb-4\">
-            <div class=\"col-md-12 col-sm-12\">
-                <label for=\"password\">";
-        // line 25
+            <div class=\"form-group\">
+                <div class=\"row mb-4\">
+                    <div class=\"col-md-12 col-sm-12\">
+                        <label for=\"password\">";
+        // line 31
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("security.login.password", [], "FOSUserBundle"), "html", null, true);
         echo "</label>
-                <input type=\"password\" class=\"form-control\" id=\"password\" name=\"_password\" required=\"required\" autocomplete=\"current-password\" />
+                        <input type=\"password\" class=\"form-control\" id=\"password\" name=\"_password\" required=\"required\" autocomplete=\"current-password\" />
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class=\"form-group form-check\">
-        <div class=\"row mb-4\">
-            <div class=\"col-md-12 col-sm-12\">
-                <input type=\"checkbox\" class=\"form-check-input\" id=\"remember_me\" name=\"_remember_me\" value=\"on\" />
-                <label class=\"form-check-label\" for=\"remember_me\">";
-        // line 34
+            <div class=\"form-group form-check\">
+                <div class=\"row mb-4\">
+                    <div class=\"col-md-12 col-sm-12\">
+                        <input type=\"checkbox\" class=\"form-check-input\" id=\"remember_me\" name=\"_remember_me\" value=\"on\" />
+                        <label class=\"form-check-label\" for=\"remember_me\">";
+        // line 40
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("security.login.remember_me", [], "FOSUserBundle"), "html", null, true);
         echo "</label>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <input type=\"submit\" class=\"btn btn-primary\" id=\"_submit\" name=\"_submit\" value=\"";
-        // line 38
+            <input type=\"submit\" class=\"btn btn-primary\" id=\"_submit\" name=\"_submit\" value=\"";
+        // line 44
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("security.login.submit", [], "FOSUserBundle"), "html", null, true);
         echo "\" />
-</form>
+        </form>
+    </div>
+    <div class=\"col\">
+
+    </div>
+</div>
+
 
 ";
         
@@ -112,7 +124,7 @@ class __TwigTemplate_501c1a02caa83d7f0900219ad574629f2a99bdc9e98ea5bdee315077aaf
 
     public function getDebugInfo()
     {
-        return array (  93 => 38,  86 => 34,  74 => 25,  64 => 18,  60 => 17,  54 => 13,  48 => 11,  46 => 10,  42 => 9,  37 => 6,  31 => 4,  29 => 3,  26 => 2,);
+        return array (  99 => 44,  92 => 40,  80 => 31,  70 => 24,  66 => 23,  60 => 19,  54 => 17,  52 => 16,  48 => 15,  37 => 6,  31 => 4,  29 => 3,  26 => 2,);
     }
 
     public function getSourceContext()
@@ -123,39 +135,51 @@ class __TwigTemplate_501c1a02caa83d7f0900219ad574629f2a99bdc9e98ea5bdee315077aaf
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
-<h2 class=\"text-center mt-5\">Login</h2>
+<div class=\"row\">
+    <div class=\"col\">
 
-<form action=\"{{ path(\"fos_user_security_check\") }}\" method=\"post\">
-    {% if csrf_token %}
-        <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token }}\" />
-    {% endif %}
+    </div>
+    <div class=\"col-6\"
+    style=\"margin-top: 150px;\">
+        <h2 class=\"text-center mt-5\">Login</h2>
 
-    <div class=\"form-group\">
-        <div class=\"row mb-4\">
-            <div class=\"col-md-12 col-sm-12\">
-                <label for=\"username\">{{ 'security.login.username'|trans }}</label>
-                <input type=\"text\" class=\"form-control\" id=\"username\" name=\"_username\" value=\"{{ last_username }}\" required=\"required\" autocomplete=\"username\" />
+        <form action=\"{{ path(\"fos_user_security_check\") }}\" method=\"post\">
+            {% if csrf_token %}
+                <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token }}\" />
+            {% endif %}
+
+            <div class=\"form-group\">
+                <div class=\"row mb-4\">
+                    <div class=\"col-md-12 col-sm-12\">
+                        <label for=\"username\">{{ 'security.login.username'|trans }}</label>
+                        <input type=\"text\" class=\"form-control\" id=\"username\" name=\"_username\" value=\"{{ last_username }}\" required=\"required\" autocomplete=\"username\" />
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class=\"form-group\">
-        <div class=\"row mb-4\">
-            <div class=\"col-md-12 col-sm-12\">
-                <label for=\"password\">{{ 'security.login.password'|trans }}</label>
-                <input type=\"password\" class=\"form-control\" id=\"password\" name=\"_password\" required=\"required\" autocomplete=\"current-password\" />
+            <div class=\"form-group\">
+                <div class=\"row mb-4\">
+                    <div class=\"col-md-12 col-sm-12\">
+                        <label for=\"password\">{{ 'security.login.password'|trans }}</label>
+                        <input type=\"password\" class=\"form-control\" id=\"password\" name=\"_password\" required=\"required\" autocomplete=\"current-password\" />
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class=\"form-group form-check\">
-        <div class=\"row mb-4\">
-            <div class=\"col-md-12 col-sm-12\">
-                <input type=\"checkbox\" class=\"form-check-input\" id=\"remember_me\" name=\"_remember_me\" value=\"on\" />
-                <label class=\"form-check-label\" for=\"remember_me\">{{ 'security.login.remember_me'|trans }}</label>
+            <div class=\"form-group form-check\">
+                <div class=\"row mb-4\">
+                    <div class=\"col-md-12 col-sm-12\">
+                        <input type=\"checkbox\" class=\"form-check-input\" id=\"remember_me\" name=\"_remember_me\" value=\"on\" />
+                        <label class=\"form-check-label\" for=\"remember_me\">{{ 'security.login.remember_me'|trans }}</label>
+                    </div>
+                </div>
             </div>
-        </div>
+            <input type=\"submit\" class=\"btn btn-primary\" id=\"_submit\" name=\"_submit\" value=\"{{ 'security.login.submit'|trans }}\" />
+        </form>
     </div>
-    <input type=\"submit\" class=\"btn btn-primary\" id=\"_submit\" name=\"_submit\" value=\"{{ 'security.login.submit'|trans }}\" />
-</form>
+    <div class=\"col\">
+
+    </div>
+</div>
+
 
 ", "@FOSUser/Security/login_content.html.twig", "C:\\wamp64\\www\\PremierLeague\\templates\\bundles\\FOSUserBundle\\Security\\login_content.html.twig");
     }
